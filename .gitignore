@@ -1,0 +1,10 @@
+*.a
+*.out
+*.exe
+debug*
+.vscode
+
+tello.exe
+tello
+
+*.log

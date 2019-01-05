@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var baseUrl = 'http://localhost:8880/'
+
+        function takeoff() {
+            console.log("TakeOff")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "takeoff");
+            request.send();
+        }
+
+        function land() {
+            console.log("Land")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "land");
+            request.send();
+        }
+
+        function palmland() {
+            console.log("Palm Land")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "palmland");
+            request.send();
+        }
+
+        function up() {
+            console.log("Up")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "up?val=5");
+            request.send();
+        }
+
+        function down() {
+            console.log("Down")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "down?val=5");
+            request.send();
+        }
+
+        function forward() {
+            console.log("Forward")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "forward?val=10");
+            request.send();
+        }
+
+        function left() {
+            console.log("Left")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "left?val=10");
+            request.send();
+        }
+
+        function right() {
+            console.log("Right")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "right?val=10");
+            request.send();
+        }
+
+        function back() {
+            console.log("Back")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "backward?val=10");
+            request.send();
+        }
+
+        function turnleft() {
+            console.log("Turn Left")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "turnleft?val=10");
+            request.send();
+        }
+
+        function turnright() {
+            console.log("Turn Right")
+            const request = new XMLHttpRequest();
+            request.open("GET", baseUrl + "turnright?val=10");
+            request.send();
+        }
+    </script>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
+                            <button type="button" class="btn btn-success btn-lg btn-block mx-1 my-2" onclick="takeoff()">TakeOff</button>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
+                            <button type="button" class="btn btn-warning btn-lg btn-block mx-1 my-2" onclick="land()">Land</button>
+                        </div>
+                        <div class="col-xs-4 col-md-4 col-sm-4 col-xs-4">
+                            <button type="button" class="btn btn-danger btn-lg btn-block mx-1 my-2" onclick="palmland()">HandLand</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8 col-md-8 col-sm-12 col-xs-12">
+                    <button type="button" class="btn btn-primary btn-lg btn-block mx-1 my-2" onclick="up()">Up</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block mx-1 my-3" onclick="down()">Down</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8 col-md-8 col-sm-12 col-xs-12">
+                    <button type="button" class="btn btn-success btn-lg btn-block mx-1 my-1" onclick="forward()">Forward</button>
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-xs-6">
+                            <button type="button" class="btn btn-warning btn-lg btn-block mx-1 my-3" onclick="left()">Left</button>
+                        </div>
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-xs-6">
+                            <button type="button" class="btn btn-danger btn-lg btn-block mx-1 my-3" onclick="right()">Right</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-info btn-lg btn-block mx-1 my-1" onclick="back()">Back</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-xs-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block mx-1 my-2" onclick="turnleft()">TurnLeft</button>
+                        </div>
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-xs-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block mx-1 my-2" onclick="turnright()">TurnRight</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
